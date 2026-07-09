@@ -4,212 +4,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto by Richard Marques - RE4 remeke</title>
+    <title>RE4 Remake - Proj. Richard Marques - </title>
+
+    <link rel="shortcut icon" href="./src/imagens/ric-foto-port.ico" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/estilo.css">
     <link rel="stylesheet" href="./src/css/responsivo.css">
-    
 </head>
 
 <body>
-    
-<div >   
+    <div class="container">
+        <header class="cabecalho">
+            <div class="logo-container">
+                <h1>
+                    <span class="letra-vermelha">R</span>esident 
+                    <span class="letra-vermelha">E</span>vil 4 <span class="remake">Remake</span>
+                </h1>
+                <div class="linha-decorativa"></div>
+                <p class="subtitulo">Personagens</p>
+            </div>
+        </header>
+        
+        <main class="personagens-slider">
+            <button class="btn-seta btn-voltar" id="btn-voltar" aria-label="Voltar">
+                <img src="./src/imagens/seta-iluminados.webp" alt="seta para avançar a imagem">
+            </button>
 
-    <header class="cabecalho">
-        <h1>
-            <span class="letra-vermelha">R</span>esident 
-            <span class="letra-vermelha">E</span>vil 4 Remake
-        </h1>
-    </header>
-    <main class="personagens-slider">
+            <div class="slider-container">
+                <ul class="lista-personagens">
+                    <li class="cartao selecionado fundo-1">
+                        <div class="cartao-header">
+                            <h2 class="nome">Leon Scott Kennedy</h2>
+                            <span class="badge">Protagonista</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="src/imagens/re4_remake___leon_re4_remake_530x557.jpg" alt="Leon Scott Kennedy" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Leon S. Kennedy é um agente do governo dos Estados Unidos, conhecido por sua coragem e habilidades excepcionais. No remake de Resident Evil 4, ele é enviado para resgatar Ashley Graham, a filha do presidente, sequestrada por um culto na Europa.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-user-shield"></i> Agente</span>
+    <span class="tag"><i class="fas fa-skull"></i> Sobrevivente</span>
+    <span class="tag"><i class="fas fa-gun"></i> Atirador</span>
+</div>
+                        </div>
+                    </li>
 
-        <button class="btn-seta btn-voltar" id="btn-voltar">
-            <img src="./src/imagens/seta-iluminados.webp" alt="seta para voltar a imagem">
-        </button>
+                    <li class="cartao fundo-2">
+                        <div class="cartao-header">
+                            <h2 class="nome">Ashley Graham</h2>
+                            <span class="badge">Coadjuvante</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="src/imagens/re4_remake___ashley_530x557.webp" alt="Ashley Graham" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Ashley Graham é a filha do presidente dos Estados Unidos e desempenha um papel central na trama de Resident Evil 4. No remake, ela é sequestrada por um culto misterioso na Europa, levando Leon S. Kennedy a ser enviado em uma missão de resgate.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-user-graduate"></i> Estudante</span>
+    <span class="tag"><i class="fas fa-crown"></i> Filha do Presidente</span>
+    <span class="tag"><i class="fas fa-hand-holding-heart"></i> Resgatada</span>
+</div>
+                        </div>
+                    </li>
 
-        <ul class="lista-personagens">
-            <li class="cartao selecionado fundo-1">
-                <h2 class="nome">Leon Scott Kennedy</h2>
+                    <li class="cartao fundo-3">
+                        <div class="cartao-header">
+                            <h2 class="nome">Ada Wong</h2>
+                            <span class="badge">Anti-heroína</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="src/imagens/re4_remake___ada_530x530.webp" alt="Ada Wong" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Ada Wong é uma espiã misteriosa e habilidosa, que desempenha um papel complexo na trama de Resident Evil 4. Ela opera independentemente, mas seus objetivos frequentemente se cruzam com os de Leon S. Kennedy.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-user-secret"></i> Espiã</span>
+    <span class="tag"><i class="fas fa-hand-sparkles"></i> Independente</span>
+    <span class="tag"><i class="fas fa-mask"></i> Misteriosa</span>
+</div>
+                        </div>
+                    </li>
 
-                <img class="imagem-personagem" src="src/imagens/re4_remake___leon_re4_remake_530x557.webp" alt="Leon Scott Kennedy" />
+                   
+                    <li class="cartao fundo-4">
+                        <div class="cartao-header">
+                            <h2 class="nome">Luis Serra</h2>
+                            <span class="badge">Aliado</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="src/imagens/re4_remake___luiz serra_530x557.webp" alt="Luis Serra" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Luis Serra é um personagem carismático e complexo em Resident Evil 4. Ele é um ex-pesquisador que desempenha um papel crucial na trama do jogo, oferecendo ajuda e informações valiosas a Leon S. Kennedy.
+                            </p>
+                            <div class="info-tags">
+            <span class="tag"><i class="fas fa-flask"></i> Pesquisador</span>
+            <span class="tag"><i class="fas fa-handshake"></i> Aliado</span>
+            <span class="tag"><i class="fas fa-microscope"></i> Cientista</span>
+        </div>
+                        </div>
+                    </li>
 
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">
-                        Leon S. Kennedy é um agente do governo dos Estados Unidos, conhecido por sua coragem e habilidades excepcionais. No remake de Resident Evil 4, ele é enviado para resgatar Ashley Graham, a filha do presidente, sequestrada por um culto na Europa.<br>
+                    <li class="cartao fundo-5">
+                        <div class="cartao-header">
+                            <h2 class="nome">Osmund Saddler</h2>
+                            <span class="badge">Antagonista</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="src/imagens/re4_remake___saddler_530x557.webp" alt="Osmund Saddler" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Osmund Saddler é o principal antagonista de Resident Evil 4 e o líder do culto Los Illuminados. Ele é a mente por trás do sequestro de Ashley Graham e dos eventos que Leon S. Kennedy deve enfrentar.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-church"></i> Líder do Culto</span>
+    <span class="tag"><i class="fas fa-skull"></i> Vilão</span>
+    <span class="tag"><i class="fas fa-crown"></i> Lorde das Plagas</span>
+</div>
+                        </div>
+                    </li>
 
-                        Aparência e Personalidade:
-                        Leon veste uma jaqueta de couro marrom, jeans e botas robustas, com um corte de cabelo curto e loiro. Ele é calmo, resoluto e tem um forte senso de dever, sempre determinado a proteger os inocentes.<br>
-                        
-                        Habilidades:
-                        Treinado em combate corpo a corpo e armas de fogo, Leon também é hábil em investigação e resolução de problemas, adaptando-se rapidamente a situações perigosas.<br>
-                        
-                        Missão:
-                        Durante sua missão, Leon enfrenta inimigos infectados por Las Plagas, lutando para desvendar os mistérios do culto e garantir a segurança de Ashley.</p>
-                        
-                </div>
-            </li>
+                    <li class="cartao fundo-6">
+                        <div class="cartao-header">
+                            <h2 class="nome">Ramon Salazar</h2>
+                            <span class="badge">Antagonista</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="./src/imagens/re4_remake___ramon-salazar_530x557.webp" alt="Ramon Salazar" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Ramon Salazar é um dos principais antagonistas de Resident Evil 4, servindo como o castelão do castelo onde grande parte do jogo se desenrola. Ele é um membro devoto do culto Los Illuminados e um subordinado de Osmund Saddler.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-church"></i> Castelo</span>
+    <span class="tag"><i class="fas fa-skull"></i> Vilão</span>
+    <span class="tag"><i class="fas fa-crown"></i> Nobre</span>
+</div>
+                        </div>
+                    </li>
 
-            <li class="cartao fundo-2">
-                <h2 class="nome">Ashley Graham</h2>
-                <img class="imagem-personagem" src="src/imagens/re4_remake___ashley_530x557.webp" alt="Ashley Graham" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">
-                        Ashley Graham é a filha do presidente dos Estados Unidos e desempenha um papel central na trama de Resident Evil 4. No remake, ela é sequestrada por um culto misterioso na Europa, levando Leon S. Kennedy a ser enviado em uma missão de resgate.<br>
-                        
-                        Aparência e Personalidade:
-                        Ashley é uma jovem de aparência delicada, com cabelos loiros e olhos claros. Ela veste roupas casuais adequadas para uma estudante universitária. Apesar de sua situação angustiante, Ashley mostra coragem e resiliência, colaborando com Leon para escapar dos perigos que enfrentam.<br>
-                        
-                        Habilidades:
-                        Embora não tenha treinamento em combate, Ashley se mostra útil em várias situações, ajudando Leon a resolver puzzles e abrir caminhos bloqueados. Sua sobrevivência depende da proteção e orientação de Leon.<br>
-                        
-                        Papel na Missão:
-                        A principal missão de Leon é garantir a segurança de Ashley e levá-la de volta aos Estados Unidos. Durante a jornada, ela enfrenta diversos perigos, incluindo os infectados por Las Plagas, e desenvolve uma relação de confiança com Leon enquanto lutam juntos para sobreviver.</p>
-                </div>
-            </li>
+                    <li class="cartao fundo-7">
+                        <div class="cartao-header">
+                            <h2 class="nome">Mercador</h2>
+                            <span class="badge">Misterioso</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="./src/imagens/re4_remake___mercador_re4_remake__530x557.webp" alt="Mercador" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Figura misteriosa presente durante toda a aventura. O Mercador oferece itens, armas e melhoras para Leon em troca de tesouros e pesetas, a moeda local.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-store"></i> Comerciante</span>
+    <span class="tag"><i class="fas fa-handshake"></i> Aliado Neutro</span>
+    <span class="tag"><i class="fas fa-crown"></i> Negociante</span>
+</div>
+                        </div>
+                    </li>
 
-            <li class="cartao fundo-3">
-                <h2 class="nome">Ada Wong</h2>
-                <img class="imagem-personagem" src="src/imagens/re4_remake___ada_530x530.webp" alt="Ada Wong" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">Ada Wong é uma espiã misteriosa e habilidosa, que desempenha um papel complexo na trama de Resident Evil 4. Ela opera independentemente, mas seus objetivos frequentemente se cruzam com os de Leon S. Kennedy.<br>
+                    <li class="cartao fundo-8">
+                        <div class="cartao-header">
+                            <h2 class="nome">Bitores Mendes</h2>
+                            <span class="badge">Antagonista</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="./src/imagens/re4_remake___bitores_mendez_530x557.webp" alt="Bitores Mendes" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                O chefe da vila que Leon investiga. Assim como os outros habitantes locais, ele venera o líder de um culto misterioso. Extremamente alto e forte, exerce certa autoridade entre os aldeões daquela região.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-building"></i> Chefe da Vila</span>
+    <span class="tag"><i class="fas fa-skull"></i> Vilão</span>
+    <span class="tag"><i class="fas fa-users"></i> Líder Local</span>
+</div>
+                        </div>
+                    </li>
 
-                        Aparência e Personalidade:
-                        Ada é conhecida por seu visual elegante e distintivo, frequentemente vestindo um vestido vermelho e usando armas sofisticadas. Ela possui um ar de mistério e confiança, mantendo suas verdadeiras intenções e lealdades bem guardadas. Ada é inteligente, calculista e sedutora, usando seu charme para manipular situações a seu favor.<br>
-                        
-                        Habilidades:
-                        Ada é altamente treinada em combate, espionagem e infiltração. Ela é experiente no uso de uma variedade de armas e dispositivos tecnológicos, além de ser ágil e letal em combate corpo a corpo.<br>
-                        
-                        Papel na Missão:
-                        No remake, Ada ajuda e interfere na missão de Leon em vários momentos, fornecendo informações cruciais e auxílio, mas sempre mantendo seus próprios objetivos em segredo. Sua presença adiciona uma camada de intriga e complexidade à narrativa, deixando Leon e os jogadores incertos sobre suas verdadeiras intenções.</p>
-                </div>
-            </li>
-            
-            <li class="cartao fundo-4">
-                <h2 class="nome">Luis Serra</h2>
-                <img class="imagem-personagem" src="src/imagens/re4_remake___luiz serra_530x557.webp" alt="Luis Serra" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">Luis Serra é um personagem carismático e complexo em Resident Evil 4. Ele é um ex-pesquisador que desempenha um papel crucial na trama do jogo, oferecendo ajuda e informações valiosas a Leon S. Kennedy.<br>
+                    <li class="cartao fundo-9">
+                        <div class="cartao-header">
+                            <h2 class="nome">Ingrid Hunnigan</h2>
+                            <span class="badge">Suporte</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="./src/imagens//re4_remake___ingrid_530x557.webp" alt="Ingrid Hunnigan" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Uma coordenadora de missões que dá suporte aos agentes do governo dos Estados Unidos. Ela será o único contato externo de Leon, repassando informações via rádio.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-headset"></i> Analista</span>
+    <span class="tag"><i class="fas fa-handshake"></i> Aliada</span>
+    <span class="tag"><i class="fas fa-radio"></i> Suporte</span>
+</div>
+                        </div>
+                    </li>
 
-                        Aparência e Personalidade:
-                        Luis é um homem de aparência descontraída, com cabelos castanhos e um estilo de roupa casual. Ele é charmoso, espirituoso e muitas vezes faz piadas, mesmo em situações perigosas. Apesar de seu comportamento despreocupado, ele é inteligente e determinado.<br>
-                        
-                        Histórico:
-                        Luis trabalhou anteriormente como pesquisador para a Umbrella Corporation e tem conhecimento profundo sobre as bioarmas e a infecção Las Plagas. Seu arrependimento por suas ações passadas e seu desejo de fazer o bem impulsionam suas ações durante o jogo.<br>
-                        
-                        Habilidades:
-                        Luis é altamente conhecedor de biotecnologia e é um excelente atirador. Sua experiência como pesquisador lhe permite fornecer informações críticas sobre os inimigos que Leon enfrenta e desenvolver soluções para combatê-los.<br>
-                        
-                        Papel na Missão:
-                        No remake, Luis auxilia Leon ao longo de sua missão, compartilhando seu conhecimento sobre Las Plagas e ajudando a enfrentar os infectados. Sua cooperação é essencial para o progresso de Leon, e ele desempenha um papel fundamental na luta contra o culto responsável pelo sequestro de Ashley.</p>
-                </div>
-            </li>
-            
-            <li class="cartao fundo-5">
-                <h2 class="nome">OSMUND SADDLER</h2>
-                <img class="imagem-personagem" src="src/imagens/re4_remake___saddler_530x557.webp" alt="OSMUND SADDLER" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">Osmund Saddler é o principal antagonista de Resident Evil 4 e o líder do culto Los Illuminados. Ele é a mente por trás do sequestro de Ashley Graham e dos eventos que Leon S. Kennedy deve enfrentar.<br>
+                    <li class="cartao fundo-10">
+                        <div class="cartao-header">
+                            <h2 class="nome">Jack Krauser</h2>
+                            <span class="badge">Antagonista</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="./src/imagens/re4_remake___jack_krauser_530x557.webp" alt="Jack Krauser" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Um ex-membro e capitão das forças militares dos Estados Unidos. Ele e Leon desenvolveram um vínculo após este se tornar um agente, e os dois tomaram rumos diferentes após seu sumiço no fim da missão conhecida por Operação: Javier.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-user-tag"></i> Ex-Militar</span>
+    <span class="tag"><i class="fas fa-skull"></i> Vilão</span>
+    <span class="tag"><i class="fas fa-crosshairs"></i> Mercenário</span>
+</div>
+                        </div>
+                    </li>
 
-                        Aparência e Personalidade:
-                        Saddler é um homem de aparência imponente, frequentemente vestido com roupas cerimoniais que refletem sua posição de líder do culto. Ele exala uma presença ameaçadora e autoritária, manipulando seus seguidores com carisma e controle absoluto. Saddler é cruel, calculista e determinado a alcançar seus objetivos a qualquer custo.<br>
-                        
-                        Histórico:
-                        Como líder de Los Illuminados, Saddler descobriu e explorou a bioarma conhecida como Las Plagas, usando-a para controlar seus seguidores e expandir sua influência. Seu objetivo é usar Ashley Graham como um meio de infiltrar e dominar o governo dos Estados Unidos.<br>
-                        
-                        Habilidades:
-                        Saddler possui habilidades sobre-humanas graças à infecção por Las Plagas, permitindo-lhe controlar os infectados e manipular seu próprio corpo de maneiras aterrorizantes. Ele é um adversário formidável, tanto em combate quanto em manipulação psicológica.<br>
-                        
-                        Papel na Missão:
-                        No remake, Saddler é o principal obstáculo que Leon deve enfrentar para resgatar Ashley e impedir que o culto realize seus planos nefastos. Sua presença constante e influência sobre os eventos criam uma atmosfera de tensão e perigo ao longo de toda a missão de Leon.</p>
-                </div>
-            </li>
-            
-            <li class="cartao fundo-6">
-                <h2 class="nome">RAMON SALAZAR</h2>
-                <img class="imagem-personagem" src="./src/imagens/re4_remake___ramon-salazar_530x557.webp" alt="RAMON SALAZAR" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">Ramon Salazar é um dos principais antagonistas de Resident Evil 4, servindo como o castelão do castelo onde grande parte do jogo se desenrola. Ele é um membro devoto do culto Los Illuminados e um subordinado de Osmund Saddler.<br>
+                    <li class="cartao fundo-11">
+                        <div class="cartao-header">
+                            <h2 class="nome">Albert Wesker</h2>
+                            <span class="badge">Antagonista</span>
+                        </div>
+                        <div class="imagem-wrapper">
+                            <img class="imagem-personagem" src="./src/imagens/re4_remake___wesker_530x557.webp" alt="Albert Wesker" />
+                        </div>
+                        <div class="descricao">
+                            <h3 class="titulo"><i class="fas fa-user"></i> Descrição</h3>
+                            <p class="texto">
+                                Sobrevivente do incidente da Mansão Spencer e Ilha Rockfort. Escondido nas sombras, Albert Wesker está em busca das Plagas existentes na pequena vila. Wesker utiliza vários agentes para obter êxito em sua missão, entre eles os agentes Wong e Krauser.
+                            </p>
+                            <div class="info-tags">
+    <span class="tag"><i class="fas fa-user-ninja"></i> Bastidores</span>
+    <span class="tag"><i class="fas fa-skull"></i> Arqui-Inimigo</span>
+    <span class="tag"><i class="fas fa-dna"></i> Manipulador</span>
+</div>
+                        </div>
+                    </li>
 
-                        Aparência e Personalidade:
-                        Salazar tem uma aparência distintiva e anômala. Ele é um homem pequeno, quase infantil, de pele pálida e cabelo branco, frequentemente vestido com trajes nobres e extravagantes, que refletem sua posição de poder. Apesar de sua aparência frágil, Salazar é cruel, arrogante e profundamente leal ao culto.<br>
-                        
-                        Histórico:
-                        Salazar provém de uma família nobre com uma longa história de administração do castelo. Sua família foi corrompida por Los Illuminados, e Salazar, em sua devoção ao culto, permitiu que Las Plagas prosperassem em seu domínio. Ele usa seu poder e recursos para apoiar os planos de Saddler e o culto.<br>
-                        
-                        Habilidades:
-                        Embora não seja fisicamente forte, Salazar possui habilidades derivadas de Las Plagas, que ele utiliza para comandar hordas de infectados e criar armadilhas mortais dentro de seu castelo. Ele também se funde com uma criatura monstruosa durante a batalha contra Leon, demonstrando a extensão de sua corrupção pelas Plagas.<br>
-                        
-                        Papel na Missão:
-                        No remake, Salazar é um dos principais adversários que Leon deve enfrentar. Ele cria inúmeros obstáculos e desafios dentro do castelo, tentando impedir Leon de resgatar Ashley Graham e frustrar os planos de Los Illuminados. Sua presença adiciona um elemento de horror e dificuldade à missão de Leon.</p>
-                </div>
-            </li>
+                </ul>
+            </div>
 
-            <li class="cartao fundo-7">
-                <h2 class="nome">MERCADOR</h2>
-                <img class="imagem-personagem" src="./src/imagens/re4_remake___mercador_re4_remake__530x557.webp" alt="MERCADOR" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">Figura misteriosa presente durante toda a aventura. O Mercador oferece itens, armas e melhoras para Leon em troca de tesouros e pesetas, a moeda local.</p>
-                </div>
-            </li>
+            <button class="btn-seta" id="btn-avancar" aria-label="Avançar">
+                <img src="./src/imagens/seta-iluminados.webp" alt="seta para avançar a imagem">
+            </button>
+        </main>
 
-            <li class="cartao fundo-8">
-                <h2 class="nome">BITORES MENDEZ</h2>
-                <img class="imagem-personagem" src="./src/imagens/re4_remake___bitores_mendez_530x557.webp" alt="BITORES MENDEZ" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">O chefe da vila que Leon investiga. Assim como os outros habitantes locais, ele venera o líder de um culto misterioso. Extremamente alto e forte, exerce certa autoridade entre os aldeões daquela região.</p>
-                </div>
-            </li>
+        <div class="progress-indicators">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+            <span class="dot" data-index="6"></span>
+            <span class="dot" data-index="7"></span>
+            <span class="dot" data-index="8"></span>
+            <span class="dot" data-index="9"></span>
+            <span class="dot" data-index="10"></span>
+        </div>
 
-            <li class="cartao fundo-9">
-                <h2 class="nome">INGRID HUNNIGAN</h2>
-                <img class="imagem-personagem" src="./src/imagens/re4_remake___ingrid_530x557.webp" alt="INGRID HUNNIGAN" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">Uma coordenadora de missões que dá suporte aos agentes do governo dos Estados Unidos. Ela será o único contato externo de Leon, repassando informações via rádio.</p>
-                </div>
-            </li>
-
-            <li class="cartao fundo-10">
-                <h2 class="nome">JACK KRAUSER</h2>
-                <img class="imagem-personagem" src="./src/imagens/re4_remake___jack_krauser_530x557.webp" alt="JACK KRAUSER" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">Um ex-membro e capitão das forças militares dos Estados Unidos. Ele e Leon desenvolveram um vínculo após este se tornar um agente, e os dois tomaram rumos diferentes após seu sumiço no fim da missão conhecida por Operação: Javier.</p>
-                </div>
-            </li>
-
-            <li class="cartao fundo-11">
-                <h2 class="nome">ALBERT WESKER</h2>
-                <img class="imagem-personagem" src="./src/imagens/re4_remake___wesker_530x557.webp" alt="ALBERT WESKER" />
-                <div class="descricao">
-                    <h3 class="titulo">Descrição</h3>
-                    <p class="texto">Sobrevivente do incidente da Mansão Spencer e Ilha Rockfort. Escondido nas sombras, Albert Wesker está em busca das Plagas existentes na pequena vila. Wesker utiliza vários agentes para obter êxito em sua missão, entre eles os agentes Wong e Krauser.</p>
-                </div>
-            </li>
-
-
-        </ul>
-
-        <button class="btn-seta" id="btn-avancar">
-            <img src="./src/imagens/seta-iluminados.webp" alt="seta para avançar a imagem">
-        </button>
-    </main>
-
+        <footer class="rodape">
+            <div class="copy">
+            <span>
+                &copy; 2026 <strong>Richard Marques</strong> &bull; Todos os direitos reservados
+            </span>
+        </div>
+        </footer>
     </div>
 
     <script src="./src/js/index.js"></script>
-
 </body>
 
 </html>

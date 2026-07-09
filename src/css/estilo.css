@@ -1,170 +1,428 @@
-body {
-  font-family: 'Outfit', sans-serif;
-  background-image: url('../imagens/re4wallpaper02.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh; /* a altura minima da janela de navegação minima */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Outfit', sans-serif;
+    background-image: url('../imagens/re4wallpaper02.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
 
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* HEADER */
 .cabecalho {
-  text-align: center;          /* para alinhar ao centro */
-  padding: 60px 0;          /* espaço entre as bordas */
+    text-align: center;
+    padding: 30px 0 20px 0;
+}
+
+.logo-container {
+    display: inline-block;
 }
 
 .cabecalho h1 {
-  color: white;
-  font-size: 90px;        /* tamanho da fonte */
-  letter-spacing: 10px;   /* espaço entre as letras */
-  text-transform: uppercase; /* para deixar o texto maiúsculo */
-  font-family: "resident_evil_4_remake_font";
-
-  color: #ffffff;                /* Cor das letras, opcional (ajuste conforme necessário) */
-  text-shadow: 2px 2px 5px black; /* Sombra preta nas letras */
+    font-family: "resident_evil_4_remake_font", 'Outfit', sans-serif;
+    font-size: clamp(40px, 8vw, 80px);
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.3);
+    letter-spacing: 5px;
+    margin-bottom: 5px;
 }
 
 .letra-vermelha {
-  color: red;
+    color: #ff1a1a;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
-@font-face{
-  font-family: "resident_evil_4_remake_font";
-  src: url(../css/fontes/resident_evil_4_remake_font.ttf);
+.remake {
+    color: #ff1a1a;
+    font-size: 0.7em;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
 }
 
+.linha-decorativa {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff1a1a, transparent);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.subtitulo {
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "resident_evil_4_remake_font";
+    src: url(../css/fontes/resident_evil_4_remake_font.ttf);
+}
+
+/* SLIDER */
 .personagens-slider {
-  display: flex;          /* foma de visualizar o emento na tela, */ 
-  justify-content: center;        /* alinhar o elemento horizontalmente */
-  align-items: center;         /* alinhar o elemento verticalmente */
-  gap: 15px;         /* espaço das setas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.slider-container {
+    flex: 1;
+    max-width: 500px;
+    height: 620px;
+    position: relative;
 }
 
 .lista-personagens {
-  width: 430px;         /* largura do elemento */
-  height: 620px;        /* altura do elemento */
-  position: relative;         /* para utilizar o position: absolute */
-  
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
+/* BOTÕES */
 .btn-seta {
-  background-color: rgba(245, 53, 53, 0.534);
-  width: 90px;
-  height: 90px;
-  border-radius: 50px;        /* arendondar as bordas */
-  border: 0;          /* tamanha da borda */
-  cursor: pointer;          /* tipo de cursor do mause */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: backgrand-color 0.2s ease-in-out;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background: rgba(255, 0, 0, 0.733);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+    flex-shrink: 0;
+    z-index: 2;
 }
 
-.btn-seta.btn-voltar {
-  transform: rotateY(180deg); /* para rodar um elemento */
+.btn-seta img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.btn-seta img {
+    color: #ffffff;
+    font-size: 24px;
 }
 
 .btn-seta:hover {
-  background-color: #519c69;
+    background: #6c9265;
+    transform: scale(1.1);
+    border-color: #c55a53;
+    box-shadow: 0 0 40px #cfc03b;
 }
 
-.cartao {
-  opacity: 0;
-  height: 100%;
-  position: absolute; /* para este funcionar, colocar position:relative; no elemento pai */
-  padding: 12px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  border-radius: 20px;
-  transition: opacity 0.3s ease-in-out;
+.btn-seta:active {
+    transform: scale(0.95);
+}
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+/*.btn-seta.btn-voltar {
+    transform: rotateY(180deg);
+}*/
+
+.btn-seta.btn-voltar img {
+    transform: scaleX(-1);
+}
+
+.btn-seta.btn-voltar:hover {
+    transform: scale(1.1);
+}
+
+
+/* CARTÕES */
+.cartao {
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.95);
+    filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
 }
 
 .cartao.selecionado {
-  opacity: 1;
-  z-index: 1;
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);
+    filter: blur(0);
+    border-color: rgba(255, 0, 0, 0.3);
 }
 
-.cartao .imagem-personagem {
-  width: 100%;
-  max-height: 380px;
+.cartao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
 }
 
 .cartao .nome {
-  background-color: #333333bd;
-  padding: 8px 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  color: #ffffff;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-left: 3px solid #ff1a1a;
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+}
+
+.badge {
+    background: rgba(255, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+}
+
+.imagem-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 10px 0;
+}
+
+.cartao .imagem-personagem {
+    border-radius: 20px;
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.cartao.selecionado .imagem-personagem {
+    animation: floatImage 3s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .cartao .descricao {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cartao .descricao .titulo {
-  background-color: #333333;
-  font-size: 20px;
-  color: #ffffff;
-  padding: 12px;
+    background: linear-gradient(90deg, #ff1a1a, #cc0000);
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.cartao .descricao .titulo i {
+    font-size: 14px;
 }
 
 .cartao .descricao .texto {
-  font-size: 14px;
-  padding: 12px;
-  text-align: justify;
-  max-height: 110px;
-  overflow-y: auto;
+    font-size: 13px;
+    padding: 15px;
+    text-align: justify;
+    max-height: 100px;
+    overflow-y: auto;
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
-.cartao.fundo-1 {
-  background: url('../imagens/maleta.webp') no-repeat;
+.cartao .descricao .texto::-webkit-scrollbar {
+    width: 5px;
 }
 
-.cartao.fundo-2 {
-  background: url('../imagens/fundo-2.webp') no-repeat;
+.cartao .descricao .texto::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
-.cartao.fundo-3 {
-  background: url('../imagens/fundo-3.webp') no-repeat;
+.cartao .descricao .texto::-webkit-scrollbar-thumb {
+    background: #ff1a1a;
+    border-radius: 10px;
 }
 
-.cartao.fundo-4 {
-  background: url('../imagens/fundo-4.webp') no-repeat;
+.info-tags {
+    display: flex;
+    gap: 10px;
+    padding: 0 15px 15px 15px;
+    flex-wrap: wrap;
 }
 
-.cartao.fundo-5 {
-  background: url('../imagens/fundo-5-sadelaer.webp') no-repeat;
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.cartao.fundo-6 {
-  background: url('../imagens/fundo-6.webp') no-repeat;
+.tag i {
+    color: #ff1a1a;
+    font-size: 10px;
 }
 
-.cartao.fundo-7 {
-  background: url('../imagens/fundo-7.webp') no-repeat;
+/* FUNDOS DOS CARTÕES */
+.cartao.fundo-1 { background: url('../imagens/maleta.webp') no-repeat center/cover; }
+.cartao.fundo-2 { background: url('../imagens/fundo-2.webp') no-repeat center/cover; }
+.cartao.fundo-3 { background: url('../imagens/fundo-3.webp') no-repeat center/cover; }
+.cartao.fundo-4 { background: url('../imagens/fundo-4.webp') no-repeat center/cover; }
+.cartao.fundo-5 { background: url('../imagens/fundo-5-sadelaer.webp') no-repeat center/cover; }
+.cartao.fundo-6 { background: url('../imagens/fundo-6.webp') no-repeat center/cover; }
+.cartao.fundo-7 { background: url('../imagens/fundo-7.webp') no-repeat center/cover; }
+.cartao.fundo-8 { background: url('../imagens/fundo-08.webp') no-repeat center/cover; }
+.cartao.fundo-9 { background: url('../imagens/fundo-9.webp') no-repeat center/cover; }
+.cartao.fundo-10 { background: url('../imagens/fundo-10.webp') no-repeat center/cover; }
+.cartao.fundo-11 { background: url('../imagens/fundo-11.webp') no-repeat center/cover; }
+
+/* INDICADORES DE PROGRESSO */
+.progress-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px 0;
+    flex-wrap: wrap;
 }
 
-.cartao.fundo-8 {
-  background: url('../imagens/fundo-08.webp') no-repeat;
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-.cartao.fundo-9 {
-  background: url('../imagens/fundo-9.webp') no-repeat;
+.dot:hover {
+    background: rgba(255, 255, 255, 0.5);
 }
 
-.cartao.fundo-10 {
-  background: url('../imagens/fundo-10.webp') no-repeat;
+.dot.active {
+    background: #ff1a1a;
+    border-color: #ff1a1a;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    transform: scale(1.2);
 }
 
-.cartao.fundo-11 {
-  background: url('../imagens/fundo-11.webp') no-repeat;
+/* RODAPÉ */
+.rodape {
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.rodape .destaque {
+    color: #ff1a1a;
+    font-weight: 600;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cartao.selecionado .cartao-header {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.cartao.selecionado .imagem-wrapper {
+    animation: fadeIn 0.5s ease-out 0.1s both;
+}
+
+.cartao.selecionado .descricao {
+    animation: fadeIn 0.5s ease-out 0.2s both;
+}
+
+
+.copy {
+    text-align: center;
+    display: block;           /* ← IMPORTANTE: span vira block para centralizar */
+    margin-top: 35px;
+    padding: 16px 0 8px;      /* ← Mais espaço vertical */
+    color: rgba(255, 255, 255, 0.5);            /* ← Tom mais suave */
+    font-size: 0.75rem;        /* ← 12px (mais legível que 10px) */
+    font-weight: 300;          /* ← Mais leve */
+    letter-spacing: 0.5px;     /* ← Espaçamento entre letras */
+    border-top: 1px solid rgba(0,0,0,0.06); /* ← Linha sutil separando */
+    width: 100%;
+}
+
+/* Versão com hover (se quiser um toque especial) */
+.copy:hover {
+    color: #ff1a1a; /* Muda cor ao passar o mouse */
+    transition: color 0.3s ease;
 }

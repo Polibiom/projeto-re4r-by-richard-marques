@@ -1,58 +1,595 @@
-@media (max-width: 620px){
-  .cabecalho{
-    padding: 30px 0;
-  }
+/* ===== RESPONSIVIDADE PARA CELULARES ===== */
 
-  .personagens-slider{
-    padding: 0 15px;
-    gap: 10px;
-  }
+/* Tablets e celulares grandes */
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 20px 0;
+    }
 
-  .btn-seta{
-    width: 20px;
-    height: 20px;
-    padding: 20px;
-  }
+    .cabecalho h1 {
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
 
-  .btn-seta img {
-    width: 30px; /* Ajuste o tamanho da imagem para se ajustar dentro do botão */
-    height: auto; /* Mantém a proporção da imagem */
-  }
+    .subtitulo {
+        font-size: 14px;
+        letter-spacing: 8px;
+    }
 
-  .lista-personagens{
-    height: 480px;
-  }
+    .linha-decorativa {
+        width: 120px;
+    }
 
+    .personagens-slider {
+        padding: 0 10px;
+        gap: 10px;
+    }
 
+    .slider-container {
+        height: 500px;
+    }
+
+    .btn-seta {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        padding: 0;
+        background: rgba(245, 53, 53, 0.8);
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+    }
+
+    .btn-seta img {
+        font-size: 22px;
+        color: #ffffff;
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+
+    .btn-seta.btn-voltar img {
+        transform: scaleX(-1);
+    }
+
+    .btn-seta:hover {
+    background: #6c9265;
+    transform: scale(1.1);
+    border-color: #c55a53;
+    box-shadow: 0 0 40px #cfc03b;
+    }
+
+    .cartao {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .cartao .nome {
+        font-size: 14px;
+        padding: 8px 15px;
+        letter-spacing: 2px;
+    }
+
+    .badge {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+
+    .cartao .imagem-personagem {
+        max-height: 220px;
+    }
+
+    .cartao .descricao .texto {
+        font-size: 12px;
+        max-height: 80px;
+        padding: 12px;
+        line-height: 1.5;
+    }
+
+    .cartao .descricao .titulo {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .info-tags {
+        padding: 0 12px 12px 12px;
+        gap: 6px;
+    }
+
+    .tag {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+
+    .progress-indicators {
+        padding: 15px 0 10px 0;
+        gap: 6px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .rodape {
+        font-size: 12px;
+        padding: 15px 0 0 0;
+    }
 }
 
+/* Celulares médios */
+@media (max-width: 620px) {
+    .container {
+        padding: 10px;
+    }
 
-@media (max-width: 393px){
-  .cabecalho h1{
-    font-size: 25px;
-  }
-  
-  .cabecalho{
-    padding: 30px 0;
-  }
+    .cabecalho {
+        padding: 15px 0;
+    }
 
-  .personagens-slider{
-    padding: 0 15px;
-    gap: 10px;
-  }
+    .cabecalho h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
 
-  .btn-seta{
-    width: 20px;
-    height: 20px;
-    padding: 20px;
-  }
+    .subtitulo {
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
 
-  .btn-seta img {
-    width: 30px; /* Ajuste o tamanho da imagem para se ajustar dentro do botão */
-    height: auto; /* Mantém a proporção da imagem */
-  }
+    .linha-decorativa {
+        width: 80px;
+        height: 2px;
+        margin: 8px auto;
+    }
 
-  .lista-personagens{
-    height: 393px;
-  }
+    .personagens-slider {
+        padding: 0 5px;
+        gap: 8px;
+    }
+
+    .slider-container {
+        height: 450px;
+    }
+
+    .btn-seta {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        padding: 0;
+        background: rgba(255, 0, 0, 0.85);
+        border-width: 2px;
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    }
+
+    .btn-seta img {
+        font-size: 18px;
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+
+    .btn-seta:hover {
+    background: #6c9265;
+    transform: scale(1.05);
+    border-color: #c55a53;
+    box-shadow: 0 0 40px #cfc03b;
+    }
+
+    .btn-seta:active {
+        transform: scale(0.9);
+    }
+
+    .cartao {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .cartao-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .cartao .nome {
+        font-size: 12px;
+        padding: 6px 12px;
+        letter-spacing: 1.5px;
+        border-left-width: 2px;
+    }
+
+    .badge {
+        font-size: 9px;
+        padding: 2px 8px;
+    }
+
+    .imagem-wrapper {
+        padding: 5px 0;
+    }
+
+    .cartao .imagem-personagem {
+        max-height: 180px;
+        max-width: 85%;
+    }
+
+    .cartao .descricao {
+        border-radius: 10px;
+    }
+
+    .cartao .descricao .titulo {
+        font-size: 12px;
+        padding: 6px 10px;
+        gap: 6px;
+    }
+
+    .cartao .descricao .texto {
+        font-size: 11px;
+        max-height: 70px;
+        padding: 10px;
+        line-height: 1.4;
+    }
+
+    .info-tags {
+        padding: 0 10px 10px 10px;
+        gap: 5px;
+    }
+
+    .tag {
+        font-size: 9px;
+        padding: 2px 8px;
+        gap: 3px;
+    }
+
+    .progress-indicators {
+        padding: 12px 0 8px 0;
+        gap: 5px;
+    }
+
+    .dot {
+        width: 7px;
+        height: 7px;
+        min-width: 7px;
+        min-height: 7px;
+    }
+
+    .dot.active {
+        transform: scale(1.3);
+    }
+
+    .rodape {
+        font-size: 11px;
+        padding: 12px 0 0 0;
+    }
+}
+
+/* Celulares pequenos - SEU BREAKPOINT ORIGINAL 393px */
+@media (max-width: 393px) {
+    .container {
+        padding: 5px;
+    }
+
+    .cabecalho {
+        padding: 10px 0;
+    }
+
+    .cabecalho h1 {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    .letra-vermelha {
+        font-size: inherit;
+    }
+
+    .remake {
+        font-size: 0.6em;
+    }
+
+    .subtitulo {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .linha-decorativa {
+        width: 60px;
+        height: 2px;
+        margin: 5px auto;
+    }
+
+    .personagens-slider {
+        padding: 0 3px;
+        gap: 5px;
+    }
+
+    .slider-container {
+        height: 400px;
+    }
+
+    .btn-seta {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        padding: 0;
+        background: rgba(255, 0, 0, 0.9);
+        border-width: 1.5px;
+        border-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    }
+
+    .btn-seta img {
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+
+    .btn-seta:hover {
+    background: #6c9265;
+    transform: scale(1.05);
+    border-color: #c55a53;
+    box-shadow: 0 0 40px #cfc03b;
+    }
+
+    .btn-seta:active {
+        transform: scale(0.85);
+    }
+
+    .cartao {
+        padding: 10px;
+        border-radius: 10px;
+        border-width: 1px;
+    }
+
+    .cartao-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .cartao .nome {
+        font-size: 10px;
+        padding: 4px 10px;
+        letter-spacing: 1px;
+        border-left-width: 2px;
+        border-radius: 6px;
+    }
+
+    .badge {
+        font-size: 8px;
+        padding: 2px 6px;
+        border-radius: 10px;
+    }
+
+    .imagem-wrapper {
+        padding: 3px 0;
+    }
+
+    .cartao .imagem-personagem {
+        max-height: 150px;
+        max-width: 80%;
+    }
+
+    .cartao .descricao {
+        border-radius: 8px;
+    }
+
+    .cartao .descricao .titulo {
+        font-size: 11px;
+        padding: 5px 8px;
+        gap: 5px;
+    }
+
+    .cartao .descricao .texto {
+        font-size: 10px;
+        max-height: 60px;
+        padding: 8px;
+        line-height: 1.3;
+    }
+
+    .cartao .descricao .texto::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .info-tags {
+        padding: 0 8px 8px 8px;
+        gap: 4px;
+    }
+
+    .tag {
+        font-size: 8px;
+        padding: 2px 6px;
+        gap: 3px;
+        border-radius: 8px;
+    }
+
+    .progress-indicators {
+        padding: 10px 0 5px 0;
+        gap: 4px;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        min-width: 6px;
+        min-height: 6px;
+        border-width: 1px;
+    }
+
+    .dot.active {
+        transform: scale(1.4);
+        box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+    }
+
+    .rodape {
+        font-size: 10px;
+        padding: 10px 0 0 0;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 320px) {
+    .container {
+        padding: 3px;
+    }
+
+    .slider-container {
+        height: 360px;
+    }
+
+    .btn-seta {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
+        padding: 0;
+        border-width: 1px;
+    }
+
+    .btn-seta img {
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+
+    .cartao {
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .cartao .nome {
+        font-size: 9px;
+        padding: 3px 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .badge {
+        font-size: 7px;
+        padding: 1px 5px;
+    }
+
+    .cartao .imagem-personagem {
+        max-height: 130px;
+        max-width: 75%;
+    }
+
+    .cartao .descricao .titulo {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+
+    .cartao .descricao .texto {
+        font-size: 9px;
+        max-height: 50px;
+        padding: 6px;
+        line-height: 1.2;
+    }
+
+    .info-tags {
+        padding: 0 6px 6px 6px;
+        gap: 3px;
+    }
+
+    .tag {
+        font-size: 7px;
+        padding: 1px 5px;
+    }
+
+    .dot {
+        width: 5px;
+        height: 5px;
+        min-width: 5px;
+        min-height: 5px;
+    }
+
+    .progress-indicators {
+        gap: 3px;
+        padding: 8px 0 4px 0;
+    }
+
+    .rodape {
+        font-size: 9px;
+        padding: 8px 0 0 0;
+    }
+}
+
+/* Orientação paisagem em celulares */
+@media (max-width: 768px) and (orientation: landscape) {
+    .slider-container {
+        height: 380px;
+    }
+
+    .cabecalho {
+        padding: 10px 0;
+    }
+
+    .cabecalho h1 {
+        font-size: 28px;
+    }
+
+    .subtitulo {
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+
+    .linha-decorativa {
+        width: 80px;
+        margin: 5px auto;
+    }
+
+    .cartao .imagem-personagem {
+        max-height: 140px;
+    }
+
+    .cartao .descricao .texto {
+        max-height: 55px;
+        font-size: 10px;
+    }
+
+    .btn-seta {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+        min-height: 35px;
+        padding: 0;
+    }
+
+    .btn-seta i {
+        font-size: 16px;
+    }
+
+    .progress-indicators {
+        padding: 8px 0 4px 0;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        min-width: 6px;
+        min-height: 6px;
+    }
+}
+
+/* Suporte para redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .cartao.selecionado .imagem-personagem {
+        animation: none !important;
+    }
+
+    .cartao {
+        transition: opacity 0.3s ease !important;
+    }
 }

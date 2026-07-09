@@ -1,49 +1,70 @@
-// OBJETIVO 1 - quando clicarmos na seta de avançar temos que mostrar o proximo 
-// cartao da lista
-  
-// passo 1 - dar um jeito de pegar o elemento HTML da seta avancar
-// passo 2 - dar um jeito de identificar o clique do usuário na seta avançar
-// passo 3 - fazer aparecer o próximo cartão da lista
-// passo 4 - buscar o cartão que esta selecionado e esconder
-
-// OBJETIVO 2 - quando clicarmos na seta de voltar temos que mostrar o cartão 
-// anterior da lista
-  
-// passo 1 - dar um jeito de pegar o elemento HTML da seta voltar
-// passo 2 - dar um jeito de identificar o clique do usuário na seta voltar
-// passo 3 - fazer aparecer o cartão anterior da lista
-// passo 4 - buscar o cartão que esta selecionado e esconder
-
-// OBJETIVO 1 - passo 1 
 const btnAvancar = document.getElementById("btn-avancar");
+const btnVoltar = document.getElementById("btn-voltar");
 let cartaoAtual = 0;
 const cartoes = document.querySelectorAll(".cartao");
-const btnVoltar = document.getElementById("btn-voltar"); // OBJETIVO 2 - passo 1
+const dots = document.querySelectorAll(".dot");
 
-// OBJETIVO 1 - passo 2
-btnAvancar.addEventListener("click", function (){
-  if(cartaoAtual === cartoes.length -1) return;
+function atualizarSlider() {
+    // Remove seleção de todos os cartões
+    cartoes.forEach(cartao => {
+        cartao.classList.remove("selecionado");
+    });
+    
+    // Adiciona seleção ao cartão atual
+    cartoes[cartaoAtual].classList.add("selecionado");
+    
+    // Atualiza os dots
+    dots.forEach((dot, index) => {
+        dot.classList.remove("active");
+        if (index === cartaoAtual) {
+            dot.classList.add("active");
+        }
+    });
+}
 
-// OBJETIVO 1 - passo 4
-  const cartaoSelecionado = document.querySelector(".selecionado");
-  cartaoSelecionado.classList.remove("selecionado");
-
-// OBJETIVO 1 - passo 3
-  cartaoAtual++;
-  console.log(cartaoAtual); cartoes[cartaoAtual].classList.add("selecionado");
+btnAvancar.addEventListener("click", function() {
+    if (cartaoAtual === cartoes.length - 1) return;
+    cartaoAtual++;
+    atualizarSlider();
 });
 
-// OBJETIVO 2 - passo 1
+btnVoltar.addEventListener("click", function() {
+    if (cartaoAtual === 0) return;
+    cartaoAtual--;
+    atualizarSlider();
+});
 
-// OBJETIVO 2 - passo 2
-btnVoltar.addEventListener("click", function (){
-  if(cartaoAtual ===0) return;
+// Adiciona evento de clique nos dots
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", function() {
+        if (index !== cartaoAtual) {
+            cartaoAtual = index;
+            atualizarSlider();
+        }
+    });
+});
 
-// OBJETIVO 2 - passo 4
-const cartaoSelecionado = document.querySelector(".selecionado");
-  cartaoSelecionado.classList.remove("selecionado");
+// Controle por teclado
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowRight") {
+        if (cartaoAtual < cartoes.length - 1) {
+            cartaoAtual++;
+            atualizarSlider();
+        }
+    } else if (event.key === "ArrowLeft") {
+        if (cartaoAtual > 0) {
+            cartaoAtual--;
+            atualizarSlider();
+        }
+    }
+});
 
-// OBJETIVO 2 - passo 3
-  cartaoAtual--;
-  cartoes[cartaoAtual].classList.add("selecionado");
+// Efeito de hover nas imagens (opcional)
+document.querySelectorAll('.cartao .imagem-personagem').forEach(img => {
+    img.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.05)';
+    });
+    img.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
 });
